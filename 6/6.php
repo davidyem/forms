@@ -8,7 +8,7 @@ if (isset($_FILES))
     foreach ($_FILES['file']['name'] as $k=>$v)
     {
 
-        $uploaddir = "../forms/";
+        $uploaddir = "../6/";
         $apend=date('YmdHis').rand(100,1000).'.png';
         $uploadfile = "$uploaddir$apend";
 
