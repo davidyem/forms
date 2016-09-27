@@ -1,12 +1,11 @@
 <?php
-function search_dir($dir,$word){
-    $arr=(scandir($dir));
-    for ($i = 0; $i < count($arr); $i++) {
-        $pos=strpos($arr[$i],$word);
-        if($pos!==false){
-            $result[]=$arr[$i];
-        }
-    }return $result;
+error_reporting(E_ALL);
+$way = '../forms';
+$dir= opendir($way);
+while(($a =  readdir($dir)) !== false){
+	if(preg_match('/\d+/',$a)){
+		echo $a, '<br/>';
+	}
 }
-print_r(search_dir(__DIR__,'mag'));
+closedir($dir);
 ?>
