@@ -3,13 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Галерея</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<style>
+    .exit {
+        text-decoration:none;
+        margin-left:2px;
+        display: block;
+        cursor: pointer;
+        border: 1px solid #cecece;
+        background: #f6f6f6;
+        box-shadow: inset 0px 20px 20px #ffffff;
+        border-radius: 8px;
+        padding: 8px 14px;
+        width: 90px;
+        color: black;
+    }
+    .exit:hover {
+        color:#9BE9AA;
+        box-shadow: inset 0px -20px 20px #ffffff;
+    }
+    .exit:active {
+        margin-top: 1px;
+        margin-bottom: -1px;
+    }
+</style>
 </head>
 <body>
 <form action="6.php" method="post" enctype="multipart/form-data">
     <input type="file" name="file[]" multiple="multiple" ><br/>
     <input type="submit" value="Загрузить фото"/>
-</form>
-<a href="6_1.php">Галерея</a>
+</form><br/>
+<a href="6_1.php" class="exit">Галерея</a>
 </body>
 </html>
